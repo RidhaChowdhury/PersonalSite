@@ -44,18 +44,66 @@ import {
     {
       title: "Full Stack Web/App Developer",
       icon: web,
-    },
-    {
-      title: "Machine Learning & AI Engineer",
-      icon: mobile,
+      skills: [
+        {
+          name: "MERN",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "SCSS",
+          color: "pink-text-gradient",
+        },
+      ],
     },
     {
       title: "Backend Engineer",
       icon: backend,
+      skills: [
+        {
+          name: "ASP.NET",
+          color: "violet-text-gradient",
+        },
+        {
+          name: "SQL",
+          color: "red-text-gradient",
+        },
+        {
+          name: "Azure",
+          color: "blue-text-gradient",
+        },
+      ],
+    },
+    {
+      title: "Machine Learning & AI Engineer",
+      icon: mobile,
+      skills: [
+        {
+          name: "OpenAI",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Scikit",
+          color: "orange-text-gradient",
+        },
+        {
+          name: "Pandas",
+          color: "blue-text-gradient",
+        },
+      ],
     },
     {
       title: "Content Creator",
       icon: creator,
+      skills: [
+        {
+          name: "Adobe",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Design",
+          color: "violet-text-gradient",
+        },
+      ],
     },
   ];
   
@@ -259,7 +307,7 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "SCSS",
           color: "pink-text-gradient",
         },
       ],

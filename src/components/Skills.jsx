@@ -23,16 +23,6 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
     }
   };
 
-  const contentAnimation = {
-    initial: base,
-    hover: {
-      scale: 1.1,
-      rotateX: -15,
-      translateY: -20,
-      boxShadow: "5px 15px 20px rgba(0, 0, 0, 1)"
-    }
-  };
-
   const shadowlessContentAnimation = {
     initial: base,
     hover: {
@@ -50,7 +40,7 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
     },
     hover: {
       scale: 0.9,
-      translateY: -10,
+      translateY: -5,
     }
   };
 
@@ -63,16 +53,6 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
     hover: {
       scale: 1,
       translateY: 0,
-    }
-  };
-
-  const overlayAnimation = {
-    initial: base,
-    hover: {
-      scale: 1.15,
-      rotateX: -20,
-      translateY: -25,
-      boxShadow: "5px 20px 10px rgba(0, 0, 0, 0.5)"
     }
   };
   
@@ -116,23 +96,23 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
   );
 };
 
-const About = () => {
+const Skills = () => {
   return (
     <>
       <SectionComponent
-        introductionText="Introduction"
-        overviewText="Overview."
+        introductionText="What I do"
+        overviewText="Skills."
         transitionDelay={0.25}
         transitionDuration={0.5}
       />
-      <motion.p
-        variants={fadeIn("", "", 0.5, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
-      >
-        I'm a versatile full-stack developer with a strong background in the MERN stack, along with proficiency in ASP.NET. With a keen eye for aesthetics and a focus on functionality and scalability, I strive to create stunning and robust websites and applications. Drawing from my experience in game development and teaching, I bring a unique blend of creativity and pedagogical skills to my work. Whether it's crafting immersive user experiences or imparting knowledge to those around me, I'm dedicated to delivering exceptional results.
-      </motion.p>
+
+      <div className='mt-5 flex flex-wrap gap-10 justify-center'>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} transitionDelay={1} transitionGap={0.25} transitionDuration={0.5} {...service}/>
+          ))}
+      </div>
     </>
   )
 }
 
-export default SectionWrapper(About, "about")
+export default SectionWrapper(Skills, "skills")

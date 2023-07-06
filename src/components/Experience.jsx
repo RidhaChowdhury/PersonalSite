@@ -12,8 +12,8 @@ import SectionComponent from './SectionComponent';
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
-      contentStyle={{ background: '#1d1836', color: '#fff' }}
-      contentArrowStyle={{ borderRight: '7px solid  #232631' }}
+      contentStyle={{ background: '#0d1a26', color: '#fff' }}
+      contentArrowStyle={{ borderRight: '7px solid  #0d1a26' }}
       iconStyle={{ background: experience.iconBg}}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
@@ -62,7 +62,7 @@ const Experience = () => {
         introductionText="What I've done so far"
         overviewText="Work Experience."
         transitionDelay={0.25}
-        transitionDuration={1}
+        transitionDuration={0.5}
       />
 
       <div className='mt-20 flex flex-col'>

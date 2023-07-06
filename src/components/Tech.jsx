@@ -13,7 +13,7 @@ const Tech = () => {
         introductionText="What I've worked with"
         overviewText="Technologies."
         transitionDelay={0.25}
-        transitionDuration={1}
+        transitionDuration={0.5}
       />
       <div className="flex flex-row flex-wrap justify-center gap-10">
         {technologies.map((technology, index) => (

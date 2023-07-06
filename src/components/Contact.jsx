@@ -34,6 +34,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Please fill in all fields.");
+      return;
+    }
+
     setLoading(true);
   
     emailjs
@@ -79,7 +85,8 @@ const Contact = () => {
           introductionText='Get in touch'
           overviewText='Contact.'
           transitionDelay={0.25}
-          transitionDuration={1}/>
+          transitionDuration={0.5}
+        />
           <form ref={formRef} onSubmit={handleSubmit} className='mt-12 flex flex-col gap-8'>
             <label className='flex flex-col'>
               <span className='text-white font-medium mb-4'>Your name</span>
