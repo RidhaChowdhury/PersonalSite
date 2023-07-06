@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import SectionComponent from './SectionComponent';
 
-const ServiceCard = ({ index, title, icon, transitionDelay, transitionGap, transitionDuration }) => {
+const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGap, transitionDuration }) => {
   const base = {
     scale: 1,
     rotateX: 0,
@@ -43,6 +43,30 @@ const ServiceCard = ({ index, title, icon, transitionDelay, transitionGap, trans
     }
   };
 
+  const headerAnimation = {
+    initial: {
+      scale: 1,
+      rotateX: 0,
+      translateY: 20,
+    },
+    hover: {
+      scale: 0.9,
+      translateY: -10,
+    }
+  };
+
+  const skillsAnimation = {
+    initial: {
+      scale: 1,
+      rotateX: 0,
+      translateY: 75,
+    },
+    hover: {
+      scale: 1,
+      translateY: 0,
+    }
+  };
+
   const overlayAnimation = {
     initial: base,
     hover: {
@@ -56,9 +80,9 @@ const ServiceCard = ({ index, title, icon, transitionDelay, transitionGap, trans
   return (
     <motion.div variants={fadeIn("right", "spring", transitionDelay + (index * transitionGap), transitionDuration)}>
       <div className='xs:w-[250px] w-full'>
-        <div className='w-full green-pink-gradient p-[2px] rounded-[20px] shadow-card'>
+        <div className='w-full orange-teal-gradient p-[2px] rounded-[20px] shadow-card'>
             <motion.div
-              className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+              className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col overflow-hidden'
               whileHover='hover'
               initial='initial'
               variants={cardAnimation}
@@ -72,10 +96,20 @@ const ServiceCard = ({ index, title, icon, transitionDelay, transitionGap, trans
               />
               <motion.h3
                 className='text-white text-[20px] font-bold text-center'
-                variants={shadowlessContentAnimation}
+                variants={headerAnimation}
               >
                 {title}
               </motion.h3>
+              <motion.div className='flex flex-row gap-2' variants={skillsAnimation}>
+                {skills.map((skill) => (
+                  <p
+                    key={`${name}-${skill.name}`}
+                    className={`text-[16px] font-semibold ${skill.color}`}
+                  >
+                    #{skill.name}
+                  </p>
+                ))}
+              </motion.div>
             </motion.div>
           </div>
       </div>
