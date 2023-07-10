@@ -20,14 +20,14 @@ const TicTacToe = ({ position, thickness }) => {
     );
   };
 
-const TicTacToeCanvas = () => {
+const TicTacToeCanvas = ({wide}) => {
   return (
     <Canvas>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} />
 
       {/* Add your toruses here */}
-      <TicTacToe position={[-15, 3, -10]} thickness={1}/>
+      <TicTacToe position={wide ? [-15, 3, -10] : [-3, 3, -10]} thickness={1}/>
       <TicTacToe position={[-16, -4, -5]} thickness={1}/>
       {/* Add more toruses with different positions */}
     </Canvas>
