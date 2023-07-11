@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
-import { TicTacToeCanvas } from './canvas';
+import HeroShapes from "./canvas/Shapes";
 
 const Hero = () => {
 
@@ -30,6 +30,7 @@ const Hero = () => {
 
   return (
     <section className='relative w-full h-screen mx-auto'>
+      <HeroShapes screenWidth={window.innerWidth} />
       <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
         <div className="hidden sm:block">
           <h1 className={`${styles.heroHeadText}`}>
