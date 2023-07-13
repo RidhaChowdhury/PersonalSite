@@ -121,8 +121,9 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
 
       const extrudeSettings = {
         depth: thickness,
-        bevelEnabled: shapeType === 'add' ? true : false,
-        bevelSegments: 6,
+        bevelEnabled: true,
+        //shapeType === 'add' ? true : false,
+        bevelSegments: 2,
         steps: 1,
         bevelSize: 0.5,
         bevelThickness: 1,
@@ -220,35 +221,35 @@ function lerpArrays(input, target) {
   return result;
 }
 
-const HeroShapes = ({ screenWidth }) => {
+const HeroShapes = ({ screenWidth, scrollPosition }) => {
   return (
     <Canvas>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={0.5} color={'orange'} />
 
-      {/* Top Left */}
-      <HeroShape position={lerpArrays({ 640: [6, 8, -14], 1536: [10, 12, -14] }, screenWidth)} thickness={0.75} shapeType='minus'/>
-      <HeroShape position={lerpArrays({ 640: [13, 7, -12], 1536: [18, 8, -12] }, screenWidth)} thickness={0.75} shapeType='add' color='(0.7, 0.4, 0.2)'/>
-      <HeroShape position={lerpArrays({ 640: [8, 1, -10], 1536: [7, 3, -8] }, screenWidth)} thickness={0.75} shapeType='pacman'  />
-      <HeroShape position={lerpArrays({ 640: [0, 10, -16], 1536: [4, 8, -16] }, screenWidth)} thickness={0.75} shapeType='lightning' color='(0.7, 0.4, 0.2)'/>
-      <HeroShape position={lerpArrays({ 640: [15, 0, -18], 1536: [26, 2, -18] }, screenWidth)} thickness={0.75} shapeType='hexagon'/>
-      
-      {/* Bottom Right */}
-      <HeroShape position={lerpArrays({ 640: [-18, -10, -16], 1536: [-25, -10, -16] }, screenWidth)} thickness={0.75} shapeType='add'/>
-      <HeroShape position={lerpArrays({ 640: [-3, -12, -14], 1536: [-10, -12, -14] }, screenWidth)} thickness={0.75} shapeType='pacman'/>
-      <HeroShape position={lerpArrays({ 640: [-8, -2, -12], 1536: [-15, -3, -12] }, screenWidth)} thickness={1} shapeType='wave'/>
-      <HeroShape position={lerpArrays({ 640: [-5, -8, -18], 1536: [-15, -10, -18] }, screenWidth)} thickness={1} shapeType='zigzag'color='(0.7, 0.4, 0.2)'/>
-      <HeroShape position={lerpArrays({ 640: [-20, 0, -20], 1536: [-30, 0, -20] }, screenWidth)} thickness={1} shapeType='triangle' color='(0.7, 0.4, 0.2)'/>
-      <HeroShape position={lerpArrays({ 640: [-15, 3, -24], 1536: [-20, 3, -24] }, screenWidth)} thickness={1} shapeType='zigzag' wireframe={true}/>
-      <HeroShape position={lerpArrays({ 640: [-7, -2, -22], 1536: [-10, -3, -22] }, screenWidth)} thickness={1} shapeType='hexagon' color='(0.7, 0.4, 0.2)' wireframe={true}/>
+      <group position={[0, -scrollPosition / 20, 0]}>
+        {/* Top Left */}
+        <HeroShape position={lerpArrays({ 640: [6, 8, -14], 1536: [10, 12, -14] }, screenWidth)} thickness={0.75} shapeType='minus'/>
+        <HeroShape position={lerpArrays({ 640: [13, 7, -12], 1536: [18, 8, -12] }, screenWidth)} thickness={0.75} shapeType='add' color='(0.7, 0.4, 0.2)'/>
+        <HeroShape position={lerpArrays({ 640: [8, 1, -10], 1536: [7, 3, -8] }, screenWidth)} thickness={0.75} shapeType='pacman'  />
+        <HeroShape position={lerpArrays({ 640: [0, 10, -16], 1536: [4, 8, -16] }, screenWidth)} thickness={0.75} shapeType='lightning' color='(0.7, 0.4, 0.2)'/>
+        <HeroShape position={lerpArrays({ 640: [15, 0, -18], 1536: [26, 2, -18] }, screenWidth)} thickness={0.75} shapeType='hexagon'/>
+        
+        {/* Bottom Right */}
+        <HeroShape position={lerpArrays({ 640: [-18, -10, -16], 1536: [-25, -10, -16] }, screenWidth)} thickness={0.75} shapeType='add'/>
+        <HeroShape position={lerpArrays({ 640: [-3, -12, -14], 1536: [-10, -12, -14] }, screenWidth)} thickness={0.75} shapeType='pacman'/>
+        <HeroShape position={lerpArrays({ 640: [-8, -2, -12], 1536: [-15, -3, -12] }, screenWidth)} thickness={1} shapeType='wave'/>
+        <HeroShape position={lerpArrays({ 640: [-5, -8, -18], 1536: [-15, -10, -18] }, screenWidth)} thickness={1} shapeType='zigzag'color='(0.7, 0.4, 0.2)'/>
+        <HeroShape position={lerpArrays({ 640: [-20, 0, -20], 1536: [-30, 0, -20] }, screenWidth)} thickness={1} shapeType='triangle' color='(0.7, 0.4, 0.2)'/>
+        <HeroShape position={lerpArrays({ 640: [-15, 3, -24], 1536: [-20, 3, -24] }, screenWidth)} thickness={1} shapeType='zigzag' wireframe={true}/>
+        <HeroShape position={lerpArrays({ 640: [-7, -2, -22], 1536: [-10, -3, -22] }, screenWidth)} thickness={1} shapeType='hexagon' color='(0.7, 0.4, 0.2)' wireframe={true}/>
 
-      {/* Center */}
-      <HeroShape position={lerpArrays({ 640: [-5, -5, -30], 1536: [-5, -5, -30] }, screenWidth)} thickness={0.75} shapeType="square" color="(0.7, 0.4, 0.2)" wireframe={true}/>
-      <HeroShape position={lerpArrays({ 640: [5, -5, -30], 1536: [5, -5, -30] }, screenWidth)} thickness={0.75} shapeType="zigzag" wireframe={true}/>
-      <HeroShape position={lerpArrays({ 640: [-5, 5, -30], 1536: [-5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="pacman" wireframe={true}/>
-      <HeroShape position={lerpArrays({ 640: [5, 5, -30], 1536: [5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="triangle" color="(0.7, 0.4, 0.2)" wireframe={true}/>
-
-    
+        {/* Center */}
+        <HeroShape position={lerpArrays({ 640: [-5, -5, -30], 1536: [-5, -5, -30] }, screenWidth)} thickness={0.75} shapeType="square" color="(0.7, 0.4, 0.2)" wireframe={true}/>
+        <HeroShape position={lerpArrays({ 640: [5, -5, -30], 1536: [5, -5, -30] }, screenWidth)} thickness={0.75} shapeType="zigzag" wireframe={true}/>
+        <HeroShape position={lerpArrays({ 640: [-5, 5, -30], 1536: [-5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="pacman" wireframe={true}/>
+        <HeroShape position={lerpArrays({ 640: [5, 5, -30], 1536: [5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="triangle" color="(0.7, 0.4, 0.2)" wireframe={true}/>
+      </group>
     </Canvas>
   );
 };
