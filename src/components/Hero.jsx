@@ -14,7 +14,6 @@ const Hero = () => {
     scrollPositionContext = currentPosition;
   };
 
-
   useEffect(() => {
     // Change the variable
     window.addEventListener("scroll", handleScroll);
@@ -50,7 +49,7 @@ const Hero = () => {
               Ridha Chowdhury
             </h1>
             <h1 className={`${styles.heroSubText} mt-2 text-accent`}>
-              {'<Software Development Engineer/>'}
+              {'<Software Engineer/>'}
             </h1>
           </div>
           <div className="sm:hidden">

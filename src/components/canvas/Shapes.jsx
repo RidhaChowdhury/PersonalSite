@@ -20,7 +20,6 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
   ];
 
   const uTimeOffset = Math.random() * 3;
-  const scrollPosition = useContext(scrollPosition);
 
   useFrame((state, delta) => {
     meshRef.current.rotation.x += delta * xSpeed;
@@ -28,7 +27,7 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
     meshRef.current.rotation.z += delta * zSpeed;
 
     meshRef.current.position.x = position[0] + Math.cos(state.clock.elapsedTime * 0.5 + xBobOffset) * 0.25;
-    meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5 + yBobOffset) * 0.25 - scrollPosition;
+    meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5 + yBobOffset) * 0.25;
     meshRef.current.position.z = position[2] + Math.sin(state.clock.elapsedTime * 0.5 + zBobOffset) * 0.25;
   
     materialRef.current.uniforms.uTime.value = state.clock.elapsedTime + uTimeOffset;
