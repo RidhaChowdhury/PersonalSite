@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Shape, ExtrudeGeometry, MeshPhongMaterial, ShaderMaterial, TorusGeometry } from 'three';
 import * as THREE from "three";
@@ -20,6 +20,7 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
   ];
 
   const uTimeOffset = Math.random() * 3;
+  const scrollPosition = useContext(scrollPosition);
 
   useFrame((state, delta) => {
     meshRef.current.rotation.x += delta * xSpeed;
@@ -27,7 +28,7 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
     meshRef.current.rotation.z += delta * zSpeed;
 
     meshRef.current.position.x = position[0] + Math.cos(state.clock.elapsedTime * 0.5 + xBobOffset) * 0.25;
-    meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5 + yBobOffset) * 0.25;
+    meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5 + yBobOffset) * 0.25 - scrollPosition;
     meshRef.current.position.z = position[2] + Math.sin(state.clock.elapsedTime * 0.5 + zBobOffset) * 0.25;
   
     materialRef.current.uniforms.uTime.value = state.clock.elapsedTime + uTimeOffset;
@@ -117,8 +118,6 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
           console.log('Invalid shape type.');
       }
       
-
-
       const extrudeSettings = {
         depth: thickness,
         bevelEnabled: true,
@@ -126,7 +125,7 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
         bevelSegments: 2,
         steps: 1,
         bevelSize: 0.5,
-        bevelThickness: 1,
+        bevelThickness: 0.25,
       };
 
       const geometry = new ExtrudeGeometry(shape, extrudeSettings);
@@ -174,7 +173,6 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
         }
       `;
 
-      
       const material = new ShaderMaterial({
         vertexShader,
         fragmentShader,
@@ -221,13 +219,12 @@ function lerpArrays(input, target) {
   return result;
 }
 
-const HeroShapes = ({ screenWidth, scrollPosition }) => {
+const HeroShapes = ({ screenWidth }) => {
   return (
     <Canvas>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={0.5} color={'orange'} />
 
-      <group position={[0, -scrollPosition / 20, 0]}>
         {/* Top Left */}
         <HeroShape position={lerpArrays({ 640: [6, 8, -14], 1536: [10, 12, -14] }, screenWidth)} thickness={0.75} shapeType='minus'/>
         <HeroShape position={lerpArrays({ 640: [13, 7, -12], 1536: [18, 8, -12] }, screenWidth)} thickness={0.75} shapeType='add' color='(0.7, 0.4, 0.2)'/>
@@ -249,7 +246,6 @@ const HeroShapes = ({ screenWidth, scrollPosition }) => {
         <HeroShape position={lerpArrays({ 640: [5, -5, -30], 1536: [5, -5, -30] }, screenWidth)} thickness={0.75} shapeType="zigzag" wireframe={true}/>
         <HeroShape position={lerpArrays({ 640: [-5, 5, -30], 1536: [-5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="pacman" wireframe={true}/>
         <HeroShape position={lerpArrays({ 640: [5, 5, -30], 1536: [5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="triangle" color="(0.7, 0.4, 0.2)" wireframe={true}/>
-      </group>
     </Canvas>
   );
 };
