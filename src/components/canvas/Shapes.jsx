@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Shape, ExtrudeGeometry, MeshPhongMaterial, ShaderMaterial, TorusGeometry } from 'three';
 import * as THREE from "three";
@@ -226,7 +226,7 @@ const HeroShapes = ({ screenWidth }) => {
 
         {/* Top Left */}
         <HeroShape position={lerpArrays({ 640: [6, 8, -14], 1536: [10, 12, -14] }, screenWidth)} thickness={0.75} shapeType='minus'/>
-        <HeroShape position={lerpArrays({ 640: [13, 7, -12], 1536: [18, 8, -12] }, screenWidth)} thickness={0.75} shapeType='add' color='(0.7, 0.4, 0.2)'/>
+        <HeroShape position={lerpArrays({ 640: [13, 7, -12], 1536: [14, 3, -12] }, screenWidth)} thickness={0.75} shapeType='add' color='(0.7, 0.4, 0.2)'/>
         <HeroShape position={lerpArrays({ 640: [8, 1, -10], 1536: [7, 3, -8] }, screenWidth)} thickness={0.75} shapeType='pacman'  />
         <HeroShape position={lerpArrays({ 640: [0, 10, -16], 1536: [4, 8, -16] }, screenWidth)} thickness={0.75} shapeType='lightning' color='(0.7, 0.4, 0.2)'/>
         <HeroShape position={lerpArrays({ 640: [15, 0, -18], 1536: [26, 2, -18] }, screenWidth)} thickness={0.75} shapeType='hexagon'/>

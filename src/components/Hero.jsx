@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState, useContext, createContext } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
 import HeroShapes from "./canvas/Shapes";
@@ -6,12 +6,10 @@ import HeroShapes from "./canvas/Shapes";
 const Hero = () => {
 
   const [isMobile, setIsMobile] = useState(false);
-  const scrollPositionContext = createContext(0);
 
   const handleScroll = () => {
     console.log(window.scrollY);
     const currentPosition = window.scrollY;
-    scrollPositionContext = currentPosition;
   };
 
   useEffect(() => {
@@ -40,11 +38,11 @@ const Hero = () => {
   }, []);
   
   return (
-    <scrollPositionContext.Provider value={scrollPositionContext}>
-      <section className='relative w-full h-screen mx-auto'>
+       <section className='relative w-full h-screen mx-auto'>
         <HeroShapes screenWidth={window.innerWidth}/>
-        <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
-          <div className="hidden sm:block">
+        <div className={`${styles.paddingX} absolute items-center inset-0 top-[0px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
+          {/* Center the div */}
+          <div className="hidden w-full v-full justify-center text-center sm:block">
             <h1 className={`${styles.heroHeadText}`}>
               Ridha Chowdhury
             </h1>
@@ -81,7 +79,6 @@ const Hero = () => {
           </a>
         </div> */}
       </section>
-    </scrollPositionContext.Provider>
   )
 }
 
