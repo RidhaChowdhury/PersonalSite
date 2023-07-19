@@ -55,7 +55,7 @@ const Hero = () => {
               Ridha
             </h1>
             <h1 className={`${styles.mobile.heroSubText} mt-2 text-accent`}>
-              {'<SDE/>'}
+              {'<SWE/>'}
             </h1>
           </div>
         </div>

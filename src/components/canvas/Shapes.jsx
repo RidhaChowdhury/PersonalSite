@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Shape, ExtrudeGeometry, MeshPhongMaterial, ShaderMaterial, TorusGeometry } from 'three';
 import * as THREE from "three";
+import { OrthographicCamera } from '@react-three/drei';
 
 const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType , wireframe=false, color='(0.0, 0.5, 0.5)'}) => {
   const meshRef = useRef();
@@ -221,6 +222,7 @@ function lerpArrays(input, target) {
 const HeroShapes = ({ screenWidth }) => {
   return (
     <Canvas>
+      <OrthographicCamera makeDefault position={[0, 0, 0] } zoom={20} near={0.1} far={100} />
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={0.5} color={'orange'} />
 

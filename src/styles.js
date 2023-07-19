@@ -17,7 +17,7 @@ const styles = {
         heroHeadText:
             "font-black text-white text-[75px] lg:leading-[98px] mt-2",
         heroSubText:
-            "text-[#dfd9ff] font-medium text-[50px] lg:leading-[40px] tracking-[9px]",
+            "text-[#dfd9ff] font-medium text-[47px] lg:leading-[40px] tracking-[9px]",
     }
 };
   
