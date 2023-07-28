@@ -26,7 +26,6 @@ import briar from "./company/briar.png";
 import first from "./company/first.png";
 import rockwell from "./company/rockwell.png";
 import thecoderschool from "./company/thecoderschool.png";
-import tesla from "./company/tesla.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -54,7 +53,6 @@ export {
   tailwind,
   typescript,
   threejs,
-  tesla,
   altrutec,
   briar,
   first,

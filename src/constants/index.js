@@ -15,7 +15,6 @@ import {
     git,
     figma,
     docker,
-    tesla,
     briar,
     first,
     altrutec,
