@@ -13,6 +13,7 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
     Math.random() * rotationSpeed - rotationSpeed / 2,
     Math.random() * rotationSpeed - rotationSpeed / 2,
   ];
+  
   // generate a random boboffset in all directions
   const [xBobOffset, yBobOffset, zBobOffset] = [
     Math.random() * 2 * Math.PI,
@@ -223,8 +224,8 @@ const HeroShapes = ({ screenWidth }) => {
   return (
     <Canvas>
       <OrthographicCamera makeDefault position={[0, 0, 0] } zoom={20} near={0.1} far={100} />
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} intensity={0.5} color={'orange'} />
+      {/* <ambientLight intensity={0.0} /> */}
+      <pointLight position={[10, 10, 10]} intensity={100} color={'orange'} castShadow />
 
         {/* Top Left */}
         <HeroShape position={lerpArrays({ 640: [6, 8, -14], 1536: [10, 12, -14] }, screenWidth)} thickness={0.75} shapeType='minus'/>
@@ -248,6 +249,7 @@ const HeroShapes = ({ screenWidth }) => {
         <HeroShape position={lerpArrays({ 640: [-5, 5, -30], 1536: [-5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="pacman" wireframe={true}/>
         <HeroShape position={lerpArrays({ 640: [5, 5, -30], 1536: [5, 5, -30] }, screenWidth)} thickness={0.75} shapeType="triangle" color="(0.7, 0.4, 0.2)" wireframe={true}/>
     </Canvas>
+
   );
 };
 

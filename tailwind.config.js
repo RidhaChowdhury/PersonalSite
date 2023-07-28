@@ -8,6 +8,7 @@ module.exports = {
         primary: "#011b31",
         secondary: "#a7c3c3",
         tertiary: "#095d66",
+        card: "#4ca8a5",
         accent: "#dd904f",
         "black-100": "#0d1a26",
         "black-200": "#090325",

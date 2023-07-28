@@ -61,7 +61,7 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
       <div className='xs:w-[250px] w-full'>
         <div className='w-full orange-teal-gradient p-[2px] rounded-[20px] shadow-card'>
             <motion.div
-              className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col overflow-hidden'
+              className='bg-card rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col overflow-hidden'
               whileHover='hover'
               initial='initial'
               variants={cardAnimation}
@@ -74,7 +74,7 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
                 variants={shadowlessContentAnimation}
               />
               <motion.h3
-                className='text-white text-[20px] font-bold text-center'
+                className='text-black-200 text-[20px] font-bold text-center'
                 variants={headerAnimation}
               >
                 {title}
