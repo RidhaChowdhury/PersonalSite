@@ -15,10 +15,12 @@ import {
     git,
     figma,
     docker,
-    meta,
-    starbucks,
     tesla,
-    shopify,
+    briar,
+    first,
+    altrutec,
+    thecoderschool,
+    rockwell,
     carrent,
     jobit,
     tripguide,
@@ -166,7 +168,7 @@ import {
     {
       title: "Software Engineering Intern",
       company_name: "Rockwell Automation",
-      icon: tesla,
+      icon: rockwell,
       iconBg: "#E6DEDD",
       date: "May 2023 - Aug 2023",
       skills: [
@@ -184,8 +186,8 @@ import {
     {
       title: "Software Engineering Instructor",
       company_name: "The Coder School",
-      icon: tesla,
-      iconBg: "#E6DEDD",
+      icon: thecoderschool,
+      iconBg: "#FFFFFF",
       date: "Feb 2020 - Aug 2023",
       skills: [
         {name: "C#", color: 'violet-text-gradient'},
@@ -200,8 +202,8 @@ import {
     {
       title: "Software Engineering Intern",
       company_name: "ALTRUTEC",
-      icon: tesla,
-      iconBg: "#E6DEDD",
+      icon: altrutec,
+      iconBg: "#FFFFFF",
       date: "June 2020 – Aug 2020",
       skills: [
         {name: "C#", color: 'violet-text-gradient'}, 
@@ -215,8 +217,8 @@ import {
     {
       title: "Software Team Lead",
       company_name: "FIRST(FLL & FTC)",
-      icon: tesla,
-      iconBg: "#E6DEDD",
+      icon: first,
+      iconBg: "#FFFFFF",
       date: "2014-2021",
       skills: [
         {name: "Java", color: 'red-text-gradient'}, 
@@ -230,7 +232,7 @@ import {
     {
       title: "Computer Science Teaching Assistant",
       company_name: "BRIAR WOODS HIGH SCHOOL",
-      icon: tesla,
+      icon: briar,
       iconBg: "#E6DEDD",
       date: "2019-2020",
       skills: [
