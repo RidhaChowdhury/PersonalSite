@@ -6,12 +6,10 @@ import HeroShapes from "./canvas/Shapes";
 const Hero = () => {
 
   const [isMobile, setIsMobile] = useState(false);
-  const scrollPositionContext = createContext(0);
 
   const handleScroll = () => {
     console.log(window.scrollY);
     const currentPosition = window.scrollY;
-    scrollPositionContext = currentPosition;
   };
 
   useEffect(() => {
@@ -40,7 +38,6 @@ const Hero = () => {
   }, []);
   
   return (
-    <scrollPositionContext.Provider value={scrollPositionContext}>
       <section className='relative w-full h-screen mx-auto'>
         <HeroShapes screenWidth={window.innerWidth}/>
         <div className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}>
@@ -81,8 +78,7 @@ const Hero = () => {
           </a>
         </div> */}
       </section>
-    </scrollPositionContext.Provider>
-  )
+  );
 }
 
 export default Hero
