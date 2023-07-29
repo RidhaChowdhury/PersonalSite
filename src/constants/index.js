@@ -272,70 +272,74 @@ import {
     },
   ];
   
-  const projects = [
+   const projects = [
     {
-      name: "Car Rent",
+      name: "LEETGPT",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "Developed a Chrome extension for code analysis and hints during LeetCode problem-solving. Engineered a FastAPI backend with LangChain, utilizing agentic LLMs with access to SERPER API and PostgreSQL to boost code hint quality.",
       tags: [
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "TypeScript",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "FastAPI",
           color: "pink-text-gradient",
         },
+        // Add more tags if needed
       ],
       image: carrent,
       source_code_link: "https://github.com/",
     },
     {
-      name: "Job IT",
+      name: "PLANTOAI",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Developed PlantoAI, a smart pot system with a mobile app for remote plant care. Developed a backend with ASP.NET C#. Automated plant care actions through TensorFlow machine learning model. Automated plant care tasks using an Arduino smart pot programmed with C++.",
       tags: [
         {
-          name: "react",
+          name: "React Native",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "TypeScript",
           color: "green-text-gradient",
         },
         {
-          name: "SCSS",
+          name: "ASP.NET",
           color: "pink-text-gradient",
         },
+        // Add more tags if needed
       ],
       image: jobit,
       source_code_link: "https://github.com/",
     },
     {
-      name: "Trip Guide",
+      name: "LATELIMNIATOR",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "Developed an autonomous online class joining tool with web automation. Dockerized the application for easy setup.",
       tags: [
         {
-          name: "nextjs",
+          name: "Python",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "Selenium",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "Tkinter",
           color: "pink-text-gradient",
         },
+        // Add more tags if needed
       ],
       image: tripguide,
       source_code_link: "https://github.com/",
     },
   ];
+
   
   export { services, technologies, experiences, testimonials, projects };
