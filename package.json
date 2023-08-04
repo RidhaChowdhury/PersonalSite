@@ -13,6 +13,8 @@
     "@emailjs/browser": "^3.11.0",
     "@react-three/drei": "^9.77.11",
     "@react-three/fiber": "^8.13.4",
+    "embla-carousel-autoplay": "^8.0.0-rc11",
+    "embla-carousel-react": "^8.0.0-rc11",
     "framer-motion": "^10.12.18",
     "maath": "^0.7.0",
     "react": "^18.2.0",
