@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
-import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Skills } from "./components";
+import { About, Contact, Experience, ExperienceHeader, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas, Skills } from "./components";
 
 const App = () => {
 
@@ -14,6 +14,7 @@ const App = () => {
 
         <About/>
         <Skills/>
+        <ExperienceHeader/>
         <Experience/>
         <Tech/>
         <Works/>

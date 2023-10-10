@@ -7,6 +7,7 @@ import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
+import { fadeIn } from '../utils/motion';
 import SectionComponent from './SectionComponent';
 import Timeline from './Timeline';
 
@@ -14,16 +15,9 @@ import Timeline from './Timeline';
 const Experience = () => {
   return (
     <>
-      <SectionComponent
-        introductionText="What I've done so far"
-        overviewText="Work Experience."
-        transitionDelay={0.25}
-        transitionDuration={0.5}
-      />
-
       <Timeline />
     </>
   )
 }
 
-export default SectionWrapper(Experience, "work")
+export default Experience;

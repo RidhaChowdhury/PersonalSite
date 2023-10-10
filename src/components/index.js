@@ -10,6 +10,7 @@ import Timeline from './Timeline';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import SectionComponent from './SectionComponent';
+import ExperienceHeader from './ExperienceHeader';
 
 export {
   Hero,
@@ -18,6 +19,7 @@ export {
   Skills,
   Tech,
   Experience,
+  ExperienceHeader,
   Works,
   Timeline,
   Feedbacks,
