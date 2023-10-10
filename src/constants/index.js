@@ -20,7 +20,7 @@ import {
     altrutec,
     thecoderschool,
     rockwell,
-    carrent,
+    leetcopilot,
     jobit,
     tripguide,
     threejs,
@@ -274,9 +274,9 @@ import {
   
    const projects = [
     {
-      name: "LEETGPT",
+      name: "LeetCopilot",
       description:
-        "Developed a Chrome extension for code analysis and hints during LeetCode problem-solving. Engineered a FastAPI backend with LangChain, utilizing agentic LLMs with access to SERPER API and PostgreSQL to boost code hint quality.",
+        "I led a 5-member team in the development of LeetCopilot, a Chrome extension designed to provide language model-driven hints for LeetCode problems. Our backend was built on FastAPI and integrated with LangChain to enhance hint accuracy via the adaptive hint system(AHS).",
       tags: [
         {
           name: "React",
@@ -292,7 +292,7 @@ import {
         },
         // Add more tags if needed
       ],
-      image: carrent,
+      image: leetcopilot,
       source_code_link: "https://github.com/",
     },
     {
