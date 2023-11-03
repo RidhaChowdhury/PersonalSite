@@ -60,10 +60,10 @@ const Hero = () => {
                 <img src={github_mark} alt="GitHub" className="w-full h-full" />
               </button>
             </a>
-            <a href={resume} target="_blank" rel="noopener noreferrer" className="flex flex-row justify-start">
-              <img src={resume_icon} alt="GitHub" className="w-10 h-10 m-0 p-0" />
-              <button className="w-24 h-10 m-0 p-0">
-                <h2 className={`${styles.heroResume} mt-2 text-accent`}>Resume</h2>
+            <a href={resume} target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2">
+              <button className="inline-flex flex-start items-center justify-center bg-accent hover:bg-accent/75 text-white font-bold py-2 px-4 rounded h-10">
+                <img src={resume_icon} alt="Resume" className="w-8 h-8 m-0 p-0" />
+                <h2 className={`${styles.heroResume} mt-0 text-sm md:text-base lg:text-lg`}>Resume</h2>
               </button>
             </a>
           </div>
@@ -75,6 +75,22 @@ const Hero = () => {
           <h1 className={`${styles.mobile.heroSubText} mt-2 text-accent`}>
             {'<SDE/>'}
           </h1>
+          <a href="https://www.linkedin.com/in/ridha-chowdhury/" target="_blank" rel="noopener noreferrer">
+              <button className="w-10 h-10 mr-2">
+                <img src={linkedin} alt="LinkedIn" className="w-full h-full" />
+              </button>
+            </a>
+            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <button className="w-10 h-10 mr-2">
+                <img src={github_mark} alt="GitHub" className="w-full h-full" />
+              </button>
+            </a>
+            <a href={resume} target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2">
+              <button className="inline-flex flex-start items-center justify-center bg-accent hover:bg-accent/75 text-white font-bold py-2 px-4 rounded h-10">
+                <img src={resume_icon} alt="Resume" className="w-8 h-8 m-0 p-0" />
+                <h2 className={`${styles.heroResume} mt-0 text-sm md:text-base lg:text-lg`}>Resume</h2>
+              </button>
+            </a>
           <div className="flex mt-4">
           </div>
         </div>

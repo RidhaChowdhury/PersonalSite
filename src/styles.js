@@ -9,7 +9,7 @@ const styles = {
         "text-[#dfd9ff] font-medium lg:text-[65px] sm:text-[25px] xs:text-[23px] lg:leading-[40px] mt-3 tracking-wide",
 
     heroResume:
-        "text-[#aaa9ff] font-small lg:text-[30px] sm:text-[25px] xs:text-[23px] lg:leading-[40px] mt-3 tracking-wide ",
+        "text-white font-small lg:text-[30px] sm:text-[25px] xs:text-[23px] lg:leading-[40px] mt-3 tracking-wide ",
 
 
     sectionHeadText:
