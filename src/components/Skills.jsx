@@ -10,14 +10,12 @@ import SectionComponent from './SectionComponent';
 const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGap, transitionDuration }) => {
   const base = {
     scale: 1,
-    rotateX: 0,
     translateY: 0,
   }
   const cardAnimation = {
     initial: base,
     hover: {
       scale: 1.05,
-      rotateX: -10,
       translateY: -15,
       boxShadow: "5px 15px 20px rgba(0, 0, 0, 0.5)"
     }
@@ -27,7 +25,6 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
     initial: base,
     hover: {
       scale: 1.05,
-      rotateX: -15,
       translateY: -15,
     }
   };
@@ -35,7 +32,6 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
   const headerAnimation = {
     initial: {
       scale: 1,
-      rotateX: 0,
       translateY: 20,
     },
     hover: {
@@ -47,7 +43,6 @@ const ServiceCard = ({ index, title, icon, skills, transitionDelay, transitionGa
   const skillsAnimation = {
     initial: {
       scale: 1,
-      rotateX: 0,
       translateY: 75,
     },
     hover: {
