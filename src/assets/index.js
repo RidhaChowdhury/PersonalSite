@@ -4,6 +4,10 @@ import creator from "./creator.png";
 import mobile from "./mobile.png";
 import web from "./web.png";
 import github from "./github.png";
+import github_mark from "./github-mark-white.svg";
+import linkedin from "./linkedin.svg"
+import resume from "./resume.pdf";
+import resume_icon from "./resume.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -38,6 +42,10 @@ export {
   mobile,
   web,
   github,
+  github_mark,
+  linkedin,
+  resume,
+  resume_icon,
   menu,
   close,
   css,
