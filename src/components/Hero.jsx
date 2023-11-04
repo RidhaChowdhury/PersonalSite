@@ -9,7 +9,6 @@ const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleScroll = () => {
-    console.log(window.scrollY);
     const currentPosition = window.scrollY;
   };
 

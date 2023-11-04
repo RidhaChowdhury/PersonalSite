@@ -48,12 +48,16 @@ import {
       skills: [
         {
           name: "MERN",
-          color: "blue-text-gradient",
+          color: "red-text-gradient",
         },
         {
-          name: "SCSS",
+          name: "Tailwind",
           color: "pink-text-gradient",
         },
+        {
+          name: "Docker",
+          color: "blue-text-gradient",
+        }
       ],
     },
     {
@@ -79,30 +83,12 @@ import {
       icon: mobile,
       skills: [
         {
-          name: "OpenAI",
+          name: "LangChain+Llama",
           color: "green-text-gradient",
         },
         {
-          name: "Scikit",
+          name: "SciKit",
           color: "orange-text-gradient",
-        },
-        {
-          name: "Pandas",
-          color: "blue-text-gradient",
-        },
-      ],
-    },
-    {
-      title: "Content Creator",
-      icon: creator,
-      skills: [
-        {
-          name: "Adobe",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Design",
-          color: "violet-text-gradient",
         },
       ],
     },
