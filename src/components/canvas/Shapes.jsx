@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh, Shape, ExtrudeGeometry, MeshPhongMaterial, ShaderMaterial, TorusGeometry } from 'three';
-import * as THREE from "three";
+import * as THREE from "three";;
+import { Points, PointMaterial, Preload} from '@react-three/drei';
+
 
 const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType , wireframe=false, color='(0.0, 0.5, 0.5)'}) => {
   const meshRef = useRef();
@@ -193,6 +195,7 @@ const HeroShape = ({ position, thickness, rotationSpeed = 0.5, radius, shapeType
     createGeometry();
   }, [shapeType, radius, thickness]);
 
+  
   return <mesh ref={meshRef} position={position} />;
 };
 
@@ -212,6 +215,7 @@ function lerpArrays(input, target) {
   const t = (target - lowerKey) / (upperKey - lowerKey);
   const result = lowerArray.map((value, index) => {
     const interpolatedValue = value + (upperArray[index] - value) * t;
+    
     return interpolatedValue;
   });
 
@@ -223,7 +227,6 @@ const HeroShapes = ({ screenWidth }) => {
     <Canvas>
       <ambientLight intensity={0.5} />
       <pointLight position={[10, 10, 10]} intensity={0.5} color={'orange'} />
-
         {/* Top Left */}
         <HeroShape position={lerpArrays({ 640: [6, 8, -14], 1536: [10, 12, -14] }, screenWidth)} thickness={0.75} shapeType='minus'/>
         <HeroShape position={lerpArrays({ 640: [13, 7, -12], 1536: [18, 8, -12] }, screenWidth)} thickness={0.75} shapeType='wave' color='(0.7, 0.4, 0.2)'/>
