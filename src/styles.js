@@ -8,6 +8,10 @@ const styles = {
     heroSubText:
         "text-[#dfd9ff] font-medium lg:text-[65px] sm:text-[25px] xs:text-[23px] lg:leading-[40px] mt-3 tracking-wide",
 
+    heroResume:
+        "text-white font-small lg:text-[30px] sm:text-[25px] xs:text-[23px] lg:leading-[40px] mt-3 tracking-wide ",
+
+
     sectionHeadText:
         "text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[30px]",
     sectionSubText:

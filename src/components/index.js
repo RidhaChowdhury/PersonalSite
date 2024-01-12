@@ -1,4 +1,4 @@
-import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas } from './canvas';
+import { EarthCanvas, BallCanvas, ComputersCanvas, StarsCanvas, Box, GridCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -10,6 +10,7 @@ import Timeline from './Timeline';
 import Feedbacks from './Feedbacks';
 import Contact from './Contact';
 import SectionComponent from './SectionComponent';
+import ExperienceHeader from './ExperienceHeader';
 
 export {
   Hero,
@@ -18,6 +19,7 @@ export {
   Skills,
   Tech,
   Experience,
+  ExperienceHeader,
   Works,
   Timeline,
   Feedbacks,
@@ -26,5 +28,7 @@ export {
   BallCanvas, 
   ComputersCanvas, 
   StarsCanvas,
+  Box,
+  GridCanvas,
   SectionComponent
 }

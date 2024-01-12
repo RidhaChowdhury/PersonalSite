@@ -15,9 +15,14 @@ import Timeline from './Timeline';
 const Experience = () => {
   return (
     <>
-      <Timeline />
+      <SectionComponent
+        introductionText="What I've done so far"
+        overviewText="Work Experience."
+        transitionDelay={0.25}
+        transitionDuration={0.125}
+      />
     </>
   )
 }
 
-export default Experience;
+export default SectionWrapper(Experience, "work")
