@@ -21,7 +21,7 @@ import {
     thecoderschool,
     rockwell,
     leetcopilot,
-    jobit,
+    planto,
     tripguide,
     threejs,
   } from "../assets";
@@ -278,7 +278,7 @@ import {
         },
         // Add more tags if needed
       ],
-      image: jobit,
+      image: planto,
       source_code_link: "https://github.com/",
     },
     {

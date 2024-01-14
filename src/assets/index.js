@@ -32,7 +32,7 @@ import rockwell from "./company/rockwell.png";
 import thecoderschool from "./company/thecoderschool.png";
 
 import leetcopilot from "./leetcopilot.png";
-import jobit from "./jobit.png";
+import planto from "./planto.png";
 import tripguide from "./tripguide.png";
 
 export {
@@ -67,6 +67,6 @@ export {
   rockwell,
   thecoderschool,
   leetcopilot,
-  jobit,
+  planto,
   tripguide,
 };
