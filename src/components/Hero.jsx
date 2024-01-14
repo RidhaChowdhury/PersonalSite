@@ -55,7 +55,7 @@ const Hero = () => {
                 <img src={linkedin} alt="LinkedIn" className="w-full h-full" />
               </button>
             </a>
-            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/RidhaChowdhury" target="_blank" rel="noopener noreferrer">
               <button className="w-10 h-10 mr-2">
                 <img src={github_mark} alt="GitHub" className="w-full h-full" />
               </button>
