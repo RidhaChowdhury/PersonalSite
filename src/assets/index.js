@@ -31,8 +31,8 @@ import first from "./company/first.png";
 import rockwell from "./company/rockwell.png";
 import thecoderschool from "./company/thecoderschool.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
+import leetcopilot from "./leetcopilot.png";
+import planto from "./planto.png";
 import tripguide from "./tripguide.png";
 
 export {
@@ -66,7 +66,7 @@ export {
   first,
   rockwell,
   thecoderschool,
-  carrent,
-  jobit,
+  leetcopilot,
+  planto,
   tripguide,
 };
