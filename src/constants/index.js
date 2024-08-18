@@ -281,28 +281,28 @@ import {
       image: planto,
       source_code_link: "https://github.com/",
     },
-    {
-      name: "LATELIMNIATOR",
-      description:
-        "Developed an autonomous online class joining tool with web automation. Dockerized the application for easy setup.",
-      tags: [
-        {
-          name: "Python",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "Selenium",
-          color: "green-text-gradient",
-        },
-        {
-          name: "Tkinter",
-          color: "pink-text-gradient",
-        },
-        // Add more tags if needed
-      ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
-    },
+    // {
+    //   name: "LATELIMNIATOR",
+    //   description:
+    //     "Developed an autonomous online class joining tool with web automation. Dockerized the application for easy setup.",
+    //   tags: [
+    //     {
+    //       name: "Python",
+    //       color: "blue-text-gradient",
+    //     },
+    //     {
+    //       name: "Selenium",
+    //       color: "green-text-gradient",
+    //     },
+    //     {
+    //       name: "Tkinter",
+    //       color: "pink-text-gradient",
+    //     },
+    //     // Add more tags if needed
+    //   ],
+    //   image: tripguide,
+    //   source_code_link: "https://github.com/",
+    // },
   ];
 
   
